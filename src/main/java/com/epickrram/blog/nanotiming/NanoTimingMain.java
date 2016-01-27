@@ -19,6 +19,7 @@ public final class NanoTimingMain
     private static void fireAway(final int numberOfContendingThreads) throws InterruptedException
     {
         System.out.printf("Measuring time to invoke System.nanoTime() with %d contending threads.%n", numberOfContendingThreads);
+        System.out.printf("Available logical CPUs on this machine: %d%n", Runtime.getRuntime().availableProcessors());
 
         final ExecutorService executorService = Executors.newFixedThreadPool(numberOfContendingThreads + 1);
 
