@@ -108,7 +108,7 @@ task bundleJar(type: Jar) {
     manifest {
         attributes 'Implementation-Title': 'Resource Bundle',
                 'Implementation-Version': version,
-                'Main-Class': 'com.epickrram.blog.warmup.example.loop.FixedLoopCountMain'
+                'Main-Class': 'com.epickrram.blog.nanotiming.NanoTimingMain'
     }
     baseName = project.name + '-all'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
